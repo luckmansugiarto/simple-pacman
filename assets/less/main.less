@@ -1,0 +1,119 @@
+* {
+	color: @color-default;
+	font-family: @font-primary;
+	font-size: @font-size-base;
+}
+
+a {
+	text-decoration: none;
+
+	&.btn {
+		background: @button-default-background;
+		border: 1px solid darken(@button-default-background, 10%);
+		color: @button-default-color;
+		display: inline-block;
+		padding: 5px 20px;
+		text-transform: uppercase;
+		transition: all .15s linear;
+
+		&:hover {
+			background: lighten(@button-default-background, 20%);
+			transition: all .15s linear;
+		}
+
+		&.btn-report {
+			background: @button-featured-background;
+			color: @button-featured-color;			
+			padding-left: 40px;
+			padding-right: 40px;
+
+			&:hover {
+				background: @button-featured-color;
+				border-color: @button-featured-background;
+				color: @button-featured-background;
+			}
+		}
+	}
+}
+
+.action-groups {
+	display: none;
+
+	ul {
+		list-style: none;	
+		padding-left: 0;	
+
+		li {
+			display: inline-block;
+			margin-right: 10px;
+
+			&:last-child {
+				margin-right: 0;
+			}
+		}
+	}
+}
+
+#board {
+	border: 1px solid @color-default;
+	display: none;
+	margin-top: 20px;
+}
+
+.command-list {
+	background: lighten(@color-grey, 10%);
+	border: 1px solid darken(@color-grey, 5%);
+	height: 100px;
+	line-height: 20px;
+	max-width: 400px;	
+	overflow: auto;
+	padding: 5px;
+}
+
+.form-groups {
+	margin: 10px 0;
+
+	.form-label {
+		font-weight: bold;
+	}	
+
+	.form-control {
+		max-width: 150px;
+		width: 100%;
+
+		&.numeric {
+			max-width: 40px;
+		}
+	}
+}
+
+h1 {
+	font-size: @h1-font-size;
+	text-transform: uppercase;
+}
+
+.heading {
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+.inputs {
+	margin-bottom: 20px;
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+
+.output-container {
+	display: none;
+
+	.result {
+		color: @color-success;
+		font-weight: bold;
+	}
+}
+
+p {
+	margin-bottom: 5px;
+}

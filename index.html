@@ -1,0 +1,64 @@
+ <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>My Simple Pacman</title>
+<meta charset="UTF-8"/>
+<meta name="robots" content="noindex,follow"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<link href="style.css" rel="stylesheet">
+</head>
+<body>
+
+<h1>Simple Pacman App</h1>
+
+<div class="inputs place">
+	<p class="heading">Place</p>
+	<div class="form-groups">
+		<label class="form-label" for="xcoordinate">X:</label>
+		<input type="number" id="xcoordinate" class="form-control numeric" min="0" max="4"/>
+	</div>
+
+	<div class="form-groups">
+		<label class="form-label" for="ycoordinate">Y:</label>
+		<input type="number" id="ycoordinate" class="form-control numeric" min="0" max="4"/>
+	</div>
+
+	<div class="form-groups">
+		<label class="form-label" for="ddl-face-direction">Facing:</label>
+		<select id="ddl-face-direction" class="face-direction form-control">
+			<option value="north">NORTH</option>
+			<option value="east">EAST</option>
+			<option value="south">SOUTH</option>
+			<option value="west">WEST</option>
+		</select>		
+	</div>
+
+	<div class="form-groups">
+		<a href="javascript:;" class="btn btn-place">Place</a>
+	</div>
+</div>
+
+<div class="action-groups">
+	<p class="heading" style="margin-top: 40px">Actions</p>
+	<ul>
+		<li><a href="javascript:;" class="btn btn-rotate-left">Left</a></li>
+		<li><a href="javascript:;" class="btn btn-move">Move</a></li>	
+		<li><a href="javascript:;" class="btn btn-rotate-right">Right</a></li>	
+	</ul>
+
+	<a href="javascript:;" class="btn btn-report">Report</a>
+</div>
+
+<p style="margin-top: 40px">List of commands:</p>
+<div class="command-list"></div>
+
+<div class="output-container">
+	<p style="margin-top: 40px">Pacman Whereabout (output): <span class="result"></span></p>
+</div>
+
+<canvas id="board"></canvas>
+
+<script type="text/javascript" src="assets/js/jquery.min.js"></script>
+<script type="text/javascript" src="assets/js/main.js"></script>
+</body>
+</html>
